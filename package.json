@@ -1,0 +1,20 @@
+{
+  "name": "nsc-hw",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "parcel build --no-minify index.html",
+    "start": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
+    "gsap": "^3.7.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "sass": "^1.41.1"
+  }
+}
