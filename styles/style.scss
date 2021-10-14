@@ -250,51 +250,104 @@ video {
     position: absolute;
     z-index: 2;
     transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
+    transition: 0.75s ease-out;
+    // opacity: 0;
+    // visibility: hidden;
 
     &.poster {
       height: 55%;
       left: 50%;
       top: 50%;
       z-index: 6;
+
+      &.aw-poster.inactive-card {
+        top: -28%;
+      }
+      &.ii-poster.inactive-card {
+        top: -34%;
+      }
+      &.ss-poster.inactive-card {
+        left: 85%;
+        top: 130%;
+      }
+      &.bw-poster.inactive-card {
+        left: 77%;
+        top: -30%;
+      }
+      &.hw-poster.inactive-card {
+        left: 37%;
+        top: 130%;
+      }
+      &.ns-poster.inactive-card {
+        left: 28%;
+        top: 130%;
+      }
     }
     &.aw {
       &-1 {
         height: 28%;
         left: 22%;
         top: 32%;
-      
+        
+        &.inactive-card {
+          left: -7%;
+          top: -14%;
+        }
       }
 
       &-2 {
         height: 25%;
         left: 13%;
         top: 65%;
+        
+        &.inactive-card {
+          left: -6%;
+          top: -58%;
+        }
       }
 
       &-3 {
         height: 44%;
         left: 29%;
         top: 72%;
+        
+        &.inactive-card {
+          left: 30%;
+          top: 123%;
+        }
       }
 
       &-4 {
         height: 22%;
         left: 73%;
         top: 30%;
+        
+        &.inactive-card {
+          left: 93%;
+          top: -12%;
+        }
       }
 
       &-5 {
         height: 30%;
         right: 17%;
         bottom: 0;
+        
+        &.inactive-card {
+          right: 23%;
+          bottom: -46%;
+        }
       }
 
       &-6 {
         height: 28%;
         bottom: 11%;
         right: 2%;
+        
+        &.inactive-card {
+          bottom: -10%;
+          right: -20%;
+        }
       }  
     }
     &.ii {
@@ -302,59 +355,109 @@ video {
         height: 19%;
         left: 29%;
         top: 28%;
+
+        &.inactive-card {
+          left: 26%;
+          top: -11%;
+        }
       }
 
       &-2 {
         height: 21%;
         left: 13%;
         top: 36%;
+
+        &.inactive-card {
+          left: -8%;
+          top: 2%;
+        }
       }
 
       &-3 {
         height: 19%;
         left: 72%;
         top: 53%;
+
+        &.inactive-card {
+          left: 86%;
+          top: 112%;
+        }
       }
 
       &-4 {
         height: 22%;
         right: 18%;
         top: 80%;
+
+        &.inactive-card {
+          right: 0%;
+          top: 113%;
+        }
       }
 
       &-5 {
         height: 14%;
         left: 33%;
         bottom: 37%;
+
+        &.inactive-card {
+          left: 41%;
+          bottom: 95%;
+        }
       }
 
       &-6 {
         height: 21%;
         bottom: -6%;
         left: 19%;
+
+        &.inactive-card {
+          bottom: -31%;
+          left: -8%;
+        }
       }
       &-7 {
         height: 17%;
         left: 18%;
         top: 58%;
+
+        &.inactive-card {
+          left: -10%;
+          top: 64%;
+        }
       }
 
       &-8 {
         height: 22%;
         left: 73%;
         top: 27%;
+
+        &.inactive-card {
+          left: 73%;
+          top: -14%;
+        }
       }
 
       &-9 {
         height: 13%;
         right: 4%;
         bottom: 7%;
+
+        &.inactive-card {
+          right: -18%;
+          bottom: -2%;
+        }
       }
 
       &-10 {
         height: 19%;
         bottom: 36%;
         right: 7%;
+
+        &.inactive-card {
+          bottom: 30%;
+          right: -15%;
+        }
       } 
     }
     &.ss {
@@ -362,18 +465,32 @@ video {
         height: 32%;
         right: 8%;
         top: 56%;
+
+        &.inactive-card {
+          right: -28%;
+          top: 20%;
+        }
       }
 
       &-2 {
         height: 33%;
         left: 23%;
         top: 35%;
+
+        &.inactive-card {
+          left: -8%;
+          top: -14%;
+        }
       }
 
       &-3 {
         height: 25%;
         left: 29%;
         top: 72%;
+
+        &.inactive-card {
+          top: 112%;
+        }
       }
     }
     &.bw {
@@ -381,30 +498,55 @@ video {
         height: 28%;
         right: 18%;
         top: 47%;
+
+        &.inactive-card {
+          right: -20%;
+          top: 67%;
+        }
       }
 
       &-2 {
         height: 28%;
         left: 21%;
         top: 68%;
+
+        &.inactive-card {
+          left: -12%;
+          top: 115%;
+        }
       }
 
       &-3 {
         height: 35%;
         right: 1%;
         top: 38%;
+
+        &.inactive-card {
+          right: -21%;
+          top: 15%;
+        }
       }
 
       &-4 {
         height: 32%;
         left: 25%;
         top: 33%;
+
+        &.inactive-card {
+          left: -7%;
+          top: 11%;
+        }
       }
 
       &-5 {
         height: 29%;
         right: 0%;
         bottom: -10%;
+
+        &.inactive-card {
+          right: 10%;
+          bottom: -45%;
+        }
       }
 
       &-6 {
@@ -418,30 +560,54 @@ video {
         height: 28%;
         right: 21%;
         top: 30%;
+
+        &.inactive-card {
+          right: 30%;
+          top: -15%;
+        }
       }
 
       &-2 {
         height: 35%;
         left: 21%;
         top: 35%;
+
+        &.inactive-card {
+          left: 15%;
+          top: -20%;
+        }
       }
 
       &-3 {
         height: 31%;
         right: 18%;
         top: 69%;
+
+        &.inactive-card {
+          right: 10%;
+          top: 115%;
+        }
       }
 
       &-4 {
         height: 32%;
         right: 1%;
         top: 49%;
+
+        &.inactive-card {
+          right: -22%;
+        }
       }
 
       &-5 {
         height: 38%;
         left: 27%;
         bottom: -14%;
+
+        &.inactive-card {
+          left: -10%;
+          bottom: 0%;
+        }
       } 
     }
     &.ns {
@@ -449,24 +615,44 @@ video {
         height: 25%;
         left: 25%;
         top: 72%;
+
+        &.inactive-card {
+          left: -12%;
+          top: 77%;
+        }
       }
 
       &-2 {
         height: 32%;
         left: 21%;
         top: 35%;
+
+        &.inactive-card {
+          left: -15%;
+          top: 10%;
+        }
       }
 
       &-3 {
         height: 44%;
         right: 10%;
         top: 42%;
+
+        &.inactive-card {
+          right: 5%;
+          top: -24%;
+        }
       }
 
       &-4 {
         height: 18%;
         right: 6%;
         top: 80%;
+
+        &.inactive-card {
+          right: -16%;
+          top: 110%;
+        }
       }
 
       &-5 {

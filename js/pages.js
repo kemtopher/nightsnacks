@@ -8,6 +8,15 @@ class PageTransition extends Highway.Transition {
         window.scrollTo(0, 0);
         from.remove();
 
+        function removeClass (targetClass) {
+            const imageGroup = document.querySelectorAll('.images-well img');
+            
+            imageGroup.forEach(el => {
+                console.log("Item: " + el.classList)
+                el.classList.remove(targetClass);
+            })
+        }
+
         const tl = gsap.timeline();
         tl
         .from(['.page-title-char'], {
@@ -31,14 +40,15 @@ class PageTransition extends Highway.Transition {
                     document.body.classList.add("body-" + bgColor);
                 }
                 changeColor();
+                removeClass('inactive-card');
                 done();
             }
         }, 0.0)
-        .to(['.images-well img'], { 
-            duration: 0.5,
-            autoAlpha: 1,
-            ease: "power4",
-        });
+        // .to(['.images-well img'], { 
+        //     duration: 0.5,
+        //     autoAlpha: 1,
+        //     ease: "power4",
+        // });
     }
 
     out({ from, done }) {
