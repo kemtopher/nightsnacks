@@ -1,77 +1,81 @@
 .nav-row {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 84px);
-  margin: 0 auto;
-  padding: 0 0 56px;
+  // position: fixed;
+  // bottom: 0;
+  // left: 50%;
+  // transform: translateX(-50%);
+  // width: calc(100% - 84px);
+  // margin: 0 auto;
+  // padding: 0 0 56px;
   // display: flex;
   // justify-content: space-between;
 
   &__btn {
-    display: inline-block;
+    // display: inline-block;
+    position: absolute;
+    bottom: 50px;
 
-    &:first-child {
-      // padding: 
-      float: left;
+    &.back-btn {
+      // float: left;
+      left: 50px !important;
     }
-    &:last-child {
-      float: right;
-    }
-  }
 
-  &.asian-womxn {
-    svg path.btn-stroke {
-      stroke: #FF4C24;
+    &.forward-btn, &.start-btn {
+      // float: right;
+      right: 50px !important;
     }
-    svg path.btn-fill {
-      fill: #FF4C24;
-    }
-  }
 
-  &.illustrators {
-    svg path.btn-stroke {
-      stroke: #FFCEB3;
+    &.asian-womxn {
+      svg path.btn-stroke {
+        stroke: #FF4C24;
+      }
+      svg path.btn-fill {
+        fill: #FF4C24;
+      }
     }
-    svg path.btn-fill {
-      fill: #FFCEB3;
-    }
-  }
 
-  &.spiritual {
-    svg path.btn-stroke {
-      stroke: #0B8639;
+    &.illustrators {
+      svg path.btn-stroke {
+        stroke: #FFCEB3;
+      }
+      svg path.btn-fill {
+        fill: #FFCEB3;
+      }
     }
-    svg path.btn-fill {
-      fill: #0B8639;
-    }
-  }
 
-  &.blog {
-    svg path.btn-stroke {
-      stroke: #C8FFCE;
+    &.spiritual {
+      svg path.btn-stroke {
+        stroke: #0B8639;
+      }
+      svg path.btn-fill {
+        fill: #0B8639;
+      }
     }
-    svg path.btn-fill {
-      fill: #C8FFCE;
-    }
-  }
 
-  &.health {
-    svg path.btn-stroke {
-      stroke: #34AC5D;
+    &.blog {
+      svg path.btn-stroke {
+        stroke: #C8FFCE;
+      }
+      svg path.btn-fill {
+        fill: #C8FFCE;
+      }
     }
-    svg path.btn-fill {
-      fill: #34AC5D;
-    }
-  }
 
-  &.snack-attack {
-    svg path.btn-stroke {
-      stroke: #8667FF;
+    &.health {
+      svg path.btn-stroke {
+        stroke: #34AC5D;
+      }
+      svg path.btn-fill {
+        fill: #34AC5D;
+      }
     }
-    svg path.btn-fill {
-      fill: #8667FF;
+
+    &.snack-attack {
+      svg path.btn-stroke {
+        stroke: #8667FF;
+      }
+      svg path.btn-fill {
+        fill: #8667FF;
+      }
     }
   }
 }
