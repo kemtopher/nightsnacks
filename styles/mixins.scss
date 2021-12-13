@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+// breakpoints
+$bp-mob: 500px;
+$bp-phab: 768px;
+$bp-tab: 1024px;
+$bp-desk: 1440px;
+$bp-lg: 2800px;
+
+
+@mixin respond($width) {
+  @media screen and (max-width: $width) { @content; }
+}
+@mixin respond-min($width) {
+  @media screen and (max-width: $width) { @content; }
+}
+
+
+@function px-calc($size) {
+  // $pxSize: math.div($size, 1.333333333);
+  $pxSize: $size * 1.333333333;
+  @return #{$pxSize}px;
+}

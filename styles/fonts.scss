@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "NSC-Helvetica";
+  src: url("/assets/HelveticaLTStd-Roman.otf");
+}
+
+@font-face {
+  font-family: "NSC-BigCaslon";
+  src: url("/assets/BigCaslon.ttf");
+  font-weight: 200;
+}
+$font-serif: "NSC-BigCaslon", Times, serif;
+$font-sans: "NSC-Helvetica", Helvetica, Arial, sans-serif;

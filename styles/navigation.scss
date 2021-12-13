@@ -1,0 +1,65 @@
+.nav-row {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 84px);
+  margin: 0 auto;
+  padding: 56px 0px;
+  display: flex;
+  justify-content: space-between;
+
+  &.asian-womxn {
+    svg path.btn-stroke {
+      stroke: #FF4C24;
+    }
+    svg path.btn-fill {
+      fill: #FF4C24;
+    }
+  }
+
+  &.illustrators {
+    svg path.btn-stroke {
+      stroke: #FFCEB3;
+    }
+    svg path.btn-fill {
+      fill: #FFCEB3;
+    }
+  }
+
+  &.spiritual {
+    svg path.btn-stroke {
+      stroke: #0B8639;
+    }
+    svg path.btn-fill {
+      fill: #0B8639;
+    }
+  }
+
+  &.blog {
+    svg path.btn-stroke {
+      stroke: #C8FFCE;
+    }
+    svg path.btn-fill {
+      fill: #C8FFCE;
+    }
+  }
+
+  &.health {
+    svg path.btn-stroke {
+      stroke: #34AC5D;
+    }
+    svg path.btn-fill {
+      fill: #34AC5D;
+    }
+  }
+
+  &.snack-attack {
+    svg path.btn-stroke {
+      stroke: #8667FF;
+    }
+    svg path.btn-fill {
+      fill: #8667FF;
+    }
+  }
+}
