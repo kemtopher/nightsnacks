@@ -18,8 +18,7 @@ class PageTransition extends Highway.Transition {
 
         const title = document.querySelector('.current-title');
         title.addEventListener('click', (e) => {
-            // console.log("lello")
-            window.location.assign('localhost');
+            window.location.assign('/');
         })
 
         function getBgColor () {
