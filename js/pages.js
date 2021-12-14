@@ -9,7 +9,7 @@ class PageTransition extends Highway.Transition {
         from.remove();
 
         function removeClass (targetClass) {
-            const imageGroup = document.querySelectorAll('.images-well img');
+            const imageGroup = document.querySelectorAll('.images-well .targetClass');
 
             imageGroup.forEach(el => {
                 el.classList.remove(targetClass);
@@ -26,57 +26,28 @@ class PageTransition extends Highway.Transition {
             document.body.className = "";
             document.body.classList.add("body-" + bgColor);
         }
-        function followTheMouse () {
-            // const mouseFollow = document.querySelector('#mouse-follow');
 
-            // document.addEventListener('mousemove', (e) => {
-            // mouseFollow.style.cssText = `
-            //     left: ${e.clientX - 25}px;
-            //     top:  ${e.clientY - 25}px;
-            // `;
-            // });
+        function projectTooltip () {
+            var tooltip = document.querySelectorAll('.project-title');
+            document.addEventListener('mousemove', fn, false);
 
-            var targets = document.querySelectorAll(".targetClass");
-
-            targets.forEach( x => {
-                function handlerIn (e) {
-                    const attribute = this.getAttribute('src');
-                    // document.querySelector('#mouse-follow').innerHTML = attribute;
-                    console.log(attribute);
+            function fn(e) {
+                for (var i=tooltip.length; i--;) {
+                    let offset_x = e.offsetX;
+                    let offset_y = e.offsetY + 25;
+                    tooltip[i].style.left = offset_x + 'px';
+                    tooltip[i].style.top = offset_y + 'px';
                 }
-                function handlerOut () {
-                    // document.querySelector('#mouse-follow').innerHTML = '';
-                }
-                $( x ).mouseenter( handlerIn ).mouseleave( handlerOut );
-            })
+            }
         }
-        // function dddd () {
-        //     var targets = document.querySelectorAll(".targetClass");
-
-        //     targets.forEach( x => {
-        //         // x.addEventListener("mouseover", (e) => {
-        //         //     // e.target.setAttribute("style", "opacity: 0.5;")
-        //         //     const attribute = e.target.getAttribute('src');
-        //         //     console.log(attribute);
-        //         //     // document.querySelector('#mouse-follow').innerHTML = attribute;
-        //         // });
-        //         function handlerIn () {
-        //             const attribute = this.getAttribute('src');
-        //             console.log(attribute);
-        //         }
-        //         function handlerOut () {
-        //             console.log("out");
-        //         }
-        //         $( x ).mouseenter( handlerIn ).mouseleave( handlerOut );
-        //     })
-        // }
         
         const tl = gsap.timeline({
-            onComplete: async () => {
-                await getBgColor();
-                await removeClass('inactive-card');
-                await followTheMouse();
-                await done();
+            onComplete: () => {
+                getBgColor();
+                removeClass('inactive-card');
+                // followTheMouse();
+                projectTooltip();
+                done();
             }
         });
 
