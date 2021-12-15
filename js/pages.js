@@ -34,7 +34,7 @@ class PageTransition extends Highway.Transition {
             function fn(e) {
                 for (var i=tooltip.length; i--;) {
                     let offset_x = e.offsetX;
-                    let offset_y = e.offsetY + 25;
+                    let offset_y = e.offsetY + 45;
                     tooltip[i].style.left = offset_x + 'px';
                     tooltip[i].style.top = offset_y + 'px';
                 }
