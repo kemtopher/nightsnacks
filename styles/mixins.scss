@@ -1,11 +1,11 @@
 @use 'sass:math';
 
 // breakpoints
-$bp-mob: 500px;
-$bp-phab: 768px;
-$bp-tab: 1024px;
-$bp-desk: 1440px;
-$bp-lg: 2800px;
+$bp-mob: 375px;
+$bp-tab: 768px;
+$bp-lap: 1280px;
+$bp-lg-lap: 1680px;
+$bp-desk: 1681px;
 
 
 @mixin respond($width) {
@@ -20,4 +20,10 @@ $bp-lg: 2800px;
   // $pxSize: math.div($size, 1.333333333);
   $pxSize: $size * 1.333333333;
   @return #{$pxSize}px;
+}
+
+@include respond($bp-tab) {
+  .mobile-only {
+    display: none !important;
+  }
 }

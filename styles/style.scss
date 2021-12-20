@@ -74,31 +74,47 @@ body {
 .scene-wrapper {
   height: 100vh;
   width: 100vw;
-  // display: flex;
-  // align-items: center;
 }
 
 .page-title-container {
   display: block;
   position: relative;
   overflow: hidden;
+
+  &.asian-title, 
+  &.illustrators-title,
+  &.blog-title,
+  &.nightsnack-title {
+    display: inline-block;
+  }
+  &.health-title {
+    display: inline-block;
+
+    @include respond($bp-tab) {
+      display: block;
+    }
+  }
 }
 
 .page-title {
   font-family: $font-sans;
-  // font-size: 172px;
-  font-size: px-calc(156);
+  // font-size: px-calc(156);
+  font-size: 195px;
+  line-height: 85%;
   font-style: normal;
   font-weight: 400;
-  // line-height: 191px;
   letter-spacing: px-calc(-10);
-  // line-height: 135pt;
   vertical-align: middle;
   text-align: center;
   margin: 0;
   position: relative;
 
-  // transform-origin: center;
+  @include respond($bp-lap) {
+    font-size: 150px;
+  }
+  @include respond($bp-mob) {
+    font-size: 64px;
+  }
 
   span.blank-char {
     min-width: 50px;
@@ -118,19 +134,33 @@ body {
   display: block;
   position: relative;
   overflow: hidden;
-  padding-top: 48px;
-  // padding-bottom: 45pt;
-  padding-bottom: 15pt;
+  padding-top: 74px;
+  padding-bottom: 35px;
+
+  @include respond($bp-lap) {
+    padding-top: 55px;
+    padding-bottom: 38px;
+  }
+  @include respond($bp-mob) {
+    padding-top: 44px;
+    padding-bottom: 12px;
+  }
 
   .anim-title {
     position: relative;
     display: inline-block;
     margin: 0;
-    // font-size: 125px;
-    font-size: px-calc(58);
-    line-height: 1.25;
+    font-size: 60px;
+    line-height: 1;
     font-weight: 200;
     z-index: 9;
+
+    @include respond($bp-lap) {
+      font-size: 46px;
+    }
+    @include respond($bp-mob) {
+      font-size: 32px;
+    }
   }
 
   .lg-title {
@@ -146,23 +176,13 @@ body {
   }
 }
 
-
-// #mouse-follow {
-//   position: fixed;
-//   left: 0;
-//   top:0;
-//   padding: 25px;
-//   z-index: 999999999999;
-//   background: red;
-// }
-
 .previous-title {
   width: 100%;
   display: inline-block;
   margin: 0;
-  // font-size: 125px;
-  font-size: px-calc(58);
-  line-height: 1.25;
+  // font-size: px-calc(58);
+  font-size: 60px;
+  line-height: 1;
   font-weight: 200;
 
   position: absolute;
@@ -170,6 +190,13 @@ body {
   top: 0;
   transform: translateX(-50%);
   z-index: -1;
+
+  @include respond($bp-lap) {
+    font-size: 46px;
+  }
+  @include respond($bp-mob) {
+    font-size: 32px;
+  }
 }
 .opening-title {
   color: #5e7017;
@@ -212,19 +239,26 @@ body {
 }
 .nsc-page-title {
   font-family: $font-serif;
-  // font-size: 58px;
   font-style: normal;
   font-weight: 400;
-  // line-height: 87px;
-  // letter-spacing: -0.02em;
   text-align: center;
 }
 
 #skoot {
   width: 0%;
-  // min-height: 150px;
-  min-height: 100px;
+  // min-height: 100px;
+  min-height: 70px;
   clip-path: inset(0 0 0 0);
+
+  @include respond($bp-lap) {
+    min-height: 54px;
+  }
+  // @include respond($bp-tab) {
+  //   min-height: 54px;
+  // }
+  @include respond($bp-mob) {
+    min-height: 40px;
+  }
 
   .current-title {
     width: 100%;
@@ -258,8 +292,10 @@ body {
   
   h3 {
     font-family: $font-sans;
+    // font-family: Helvetica, Arial, sans-serif;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 85%;
+    // letter-spacing: -
     color: #5e7017;
     margin: 0;
 
@@ -268,22 +304,24 @@ body {
     }
     &.intro-content {
       font-size: 212px;
-      // font-size: 228px;
-      // line-height: 180px;
-      // letter-spacing: -4px;
     }
   }
 }
 .yir-cont {
   &:first-child {
-    margin-right: 4em;
+    // margin-right: 4em;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  &:last-child {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
 video {
   width: 80%;
 }
-
 
 .images-well {
   width: 100%;
@@ -293,7 +331,6 @@ video {
   left: 0;
 
   &.asian-womxn .targetClass:hover:not(.poster) {
-    // filter: drop-shadow(0 0 17px #FF4C24);
     -webkit-box-shadow: 0px 0px 24px 12px #FF4C24; 
     box-shadow: 0px 0px 24px 12px #FF4C24;
   }
@@ -308,22 +345,18 @@ video {
     }
   }
   &.blog .targetClass:hover:not(.poster) {
-    // filter: drop-shadow(0 0 17px #C8FFCE);
     -webkit-box-shadow: 0px 0px 24px 12px #C8FFCE; 
     box-shadow: 0px 0px 24px 12px #C8FFCE;
   }
   &.health .targetClass:hover:not(.poster) {
-    // filter: drop-shadow(0 0 17px #34AC5D);
     -webkit-box-shadow: 0px 0px 24px 12px #34AC5D; 
     box-shadow: 0px 0px 24px 12px #34AC5D;
   }
   &.nightsnack .targetClass:hover:not(.poster) {
-    // filter: drop-shadow(0 0 17px #8667FF);
     -webkit-box-shadow: 0px 0px 24px 12px #8667FF; 
     box-shadow: 0px 0px 24px 12px #8667FF;
   }
   &.spiritual .targetClass:hover:not(.poster) {
-    // filter: drop-shadow(0 0 17px #0B8639);
     -webkit-box-shadow: 0px 0px 24px 12px #0B8639; 
     box-shadow: 0px 0px 24px 12px #0B8639;
   }
@@ -368,11 +401,7 @@ video {
       font-family: $font-sans;
       letter-spacing: -0.4px;
       line-height: 92%;
-      // color: #fff;
       text-transform: uppercase;
-      // background: red;
-      // margin-left: 28px;
-      // padding: 10px;
       min-width: 300px;
       min-height: 50px;
       text-align: center;
@@ -385,6 +414,7 @@ video {
       width: 100%;
       height: 100%;
     }
+    
     &:hover:not(.poster) {
       z-index: 99999999;
       cursor: crosshair;

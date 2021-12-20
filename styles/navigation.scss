@@ -12,16 +12,51 @@
   &__btn {
     // display: inline-block;
     position: absolute;
-    bottom: 50px;
+    bottom: 69.55px;
+
+    @include respond($bp-lap) {
+      bottom: 50px;
+    }
+    @include respond($bp-tab) {
+      bottom: 45px;
+    }
+    @include respond($bp-mob) {
+      bottom: 32px;
+    }
+
+    svg {
+      width: 150px;
+
+      @include respond($bp-lap) {
+        width: 110px;
+      }
+      @include respond($bp-mob) {
+        width: 95px;
+      }
+    }
 
     &.back-btn {
       // float: left;
-      left: 50px !important;
+      left: 50px;
+
+      @include respond($bp-lap) {
+        left: 33px;
+      }
+      @include respond($bp-mob) {
+        left: 20px;
+      }
     }
 
     &.forward-btn, &.start-btn {
       // float: right;
-      right: 50px !important;
+      right: 50px;
+
+      @include respond($bp-lap) {
+        right: 33px;
+      }
+      @include respond($bp-mob) {
+        right: 20px;
+      }
     }
 
     &.asian-womxn {
