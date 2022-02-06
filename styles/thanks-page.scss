@@ -1,0 +1,77 @@
+.mail-signup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 28px 0 20px;
+
+  @include respond-min($bp-lap) {
+    margin: 40px 21px;
+  }
+
+  @include respond-min($bp-lg-lap) {
+    margin: 44px 0 22px;
+  }
+
+  @include  respond-min($bp-desk) {
+    margin: 54px 0 29px;
+  }
+
+  .form-subscribe {
+    position: relative;
+    width: 350px;
+    height: 32px;
+
+    .button__submit, 
+    #mce-EMAIL {
+      height: 32px;
+      padding: 0;
+      margin: 0;
+      border-radius: 100px;
+      border: 0px solid #000000;
+      text-transform: uppercase;
+      font-family: $font-sans;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0;
+
+      @include respond-min($bp-desk) {
+        font-size: 12px;
+      }
+    }
+    .button__submit {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 97px;
+      background-color: #FF4C24;
+      color: #ffffff;
+    }
+    
+    #mce-EMAIL {
+      height: 32px;
+      width: 90%;
+      border-radius: 100px;
+      font-weight: 200;
+      color: #999999;
+      padding-left: 16px;
+    }
+  }
+}
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 0;
+  gap: 24px;
+  font-family: $font-sans;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #5E7017;
+  list-style: none;
+  font-size: 12px;
+
+  @include respond-min($bp-desk) {
+    font-size: 14px;
+  }
+}

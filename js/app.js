@@ -16,7 +16,7 @@ $('body').mousemove(function(e){
 });
 
 function callParallax(e){
-  parallaxIt(e, '.images-well', -30);
+  parallaxIt(e, '.images-well', -50);
 }
 
 function parallaxIt(e, target, movement){
@@ -30,4 +30,18 @@ function parallaxIt(e, target, movement){
   })
 }
 
+const tl = gsap.timeline({
+  onComplete: () => {
+      done();
+  }
+});
 
+tl
+// GENERAL TITLE->IN
+.from('.page-title-js', {
+  duration: 1,
+  ease: "power4",
+  yPercent: -120,
+  stagger: 0.045,
+  delay: 0.3
+}, 0.0);

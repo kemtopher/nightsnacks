@@ -5,6 +5,26 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 96px;
+  height: 219px;
   // z-index: 3;
+
+  @include respond-min($bp-tab) {
+    height: 253px;
+  }
+  
+  @include respond-min($bp-lap) {
+    height: 76px;
+  }
+  
+  @include respond-min($bp-lg-lap) {
+    height: 128px;
+  }
+  
+  @include respond-min($bp-desk) {
+    height: 116px;
+  }
+  
+  @include respond-min($bp-lg-desk) {
+    height: 131px;
+  }
 }

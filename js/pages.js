@@ -7,7 +7,7 @@ class PageTransition extends Highway.Transition {
     in({ from, to, done }) {
         // window.scrollTo(0, 0);
         from.remove();
-
+        console.log("pages go here");
         function removeClass (targetClass) {
             const imageGroup = document.querySelectorAll('.images-well .targetClass');
 
@@ -16,7 +16,7 @@ class PageTransition extends Highway.Transition {
             })
         }
 
-        const title = document.querySelector('.current-title');
+        const title = document.querySelector('.current-title.nsc-title-small');
         title.addEventListener('click', (e) => {
             window.location.assign('/');
         })
@@ -52,12 +52,16 @@ class PageTransition extends Highway.Transition {
         });
 
         tl
-        .from('.page-title-char', {
+        // GENERAL TITLE->IN
+        .from('.page-title-js', {
             duration: 1,
             ease: "power4",
-            yPercent: -100,
-            stagger: 0.045
+            yPercent: -120,
+            stagger: 0.045,
+            delay: 0.3
         },0.0)
+
+        // BG SEGMENTS
         .fromTo('.bg-segment', { 
             width: '0%'
         },
@@ -67,7 +71,9 @@ class PageTransition extends Highway.Transition {
             ease: "power4",
             stagger: 0.25
         }, 0.0)
-        .fromTo('#skoot', { 
+
+        // PAGE TITLE SWIPE
+        .fromTo('#nsc-anim-wipe', { 
             width: '0%'
         },
         {

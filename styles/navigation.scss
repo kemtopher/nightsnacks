@@ -1,68 +1,133 @@
 .nav-row {
-  // position: fixed;
-  // bottom: 0;
-  // left: 50%;
-  // transform: translateX(-50%);
-  // width: calc(100% - 84px);
-  // margin: 0 auto;
-  // padding: 0 0 56px;
-  // display: flex;
-  // justify-content: space-between;
 
   &__btn {
-    // display: inline-block;
+    bottom: 32px;
     position: absolute;
-    bottom: 69.55px;
 
-    @include respond($bp-lap) {
+    @include respond-min($bp-tab) {
       bottom: 50px;
     }
-    @include respond($bp-tab) {
-      bottom: 45px;
-    }
-    @include respond($bp-mob) {
-      bottom: 32px;
+
+    @include respond-min($bp-lg-lap) {
+      bottom: 70px;
     }
 
-    svg {
-      width: 150px;
+    @include respond-min($bp-lg-desk) {
+      bottom: 85px;
+    }
 
-      @include respond($bp-lap) {
-        width: 110px;
-      }
-      @include respond($bp-mob) {
+    a {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      vertical-align: middle; 
+      overflow: hidden;
+
+      svg {
+        display: inline-block;
         width: 95px;
+        height: 100%;
+  
+        @include respond-min($bp-lap) {
+          width: 110px;
+        }
+  
+        @include respond-min($bp-desk) {
+          width: 150px;
+        }
+      }
+
+      &.begin-again {
+        svg {
+          width: 114px;
+    
+          @include respond-min($bp-lap) {
+            width: 137px;
+          }
+    
+          @include respond-min($bp-desk) {
+            width: 182px;
+          }
+        }
       }
     }
-
+    // $bp-tab: 768px;
+    // $bp-lap: 1280px;
+    // $bp-lg-lap: 1440px;
+    // $bp-desk: 1680px;
+    // $bp-lg-desk: 1920px;
     &.back-btn {
-      // float: left;
-      left: 50px;
+      left: 20px;
 
-      @include respond($bp-lap) {
+      @include respond-min($bp-lap) {
         left: 33px;
       }
-      @include respond($bp-mob) {
-        left: 20px;
+
+      @include respond-min($bp-lg-lap) {
+        left: 55px;
+      }
+
+      @include respond-min($bp-desk) {
+        left: 50px;
+      }
+
+      @include respond-min($bp-lg-desk) {
+        left: 65px;
       }
     }
 
-    &.forward-btn, &.start-btn {
-      // float: right;
-      right: 50px;
+    &.forward-btn {
+      transform: translateX(0%);
+      right: 20px;
 
-      @include respond($bp-lap) {
+      @include respond-min($bp-lap) {
         right: 33px;
       }
-      @include respond($bp-mob) {
-        right: 20px;
+
+      @include respond-min($bp-lg-lap) {
+        right: 55px;
       }
+
+      @include respond-min($bp-desk) {
+        right: 50px;
+      }
+
+      @include respond-min($bp-lg-desk) {
+        right: 65px;
+      }
+    }
+
+    &.start-btn {
+      right: 50%;
+      transform: translateX(50%);
+
+      @include respond-min($bp-lap) {
+        right: 35px;
+        transform: translateX(0%);
+      }
+
+      @include respond-min($bp-lg-lap) {
+        right: 55px;
+      }
+
+      @include respond-min($bp-desk) {
+        right: 50px;
+      }
+
+      @include respond-min($bp-lg-desk) {
+        right: 70px;
+      }
+    }
+
+    &.lg-forward-btn svg {
+      width: auto;
     }
 
     &.asian-womxn {
       svg path.btn-stroke {
         stroke: #FF4C24;
       }
+      
       svg path.btn-fill {
         fill: #FF4C24;
       }
@@ -72,6 +137,7 @@
       svg path.btn-stroke {
         stroke: #FFCEB3;
       }
+
       svg path.btn-fill {
         fill: #FFCEB3;
       }
@@ -81,6 +147,7 @@
       svg path.btn-stroke {
         stroke: #0B8639;
       }
+
       svg path.btn-fill {
         fill: #0B8639;
       }
@@ -90,6 +157,7 @@
       svg path.btn-stroke {
         stroke: #C8FFCE;
       }
+
       svg path.btn-fill {
         fill: #C8FFCE;
       }
@@ -99,6 +167,7 @@
       svg path.btn-stroke {
         stroke: #34AC5D;
       }
+
       svg path.btn-fill {
         fill: #34AC5D;
       }
@@ -108,6 +177,7 @@
       svg path.btn-stroke {
         stroke: #8667FF;
       }
+
       svg path.btn-fill {
         fill: #8667FF;
       }

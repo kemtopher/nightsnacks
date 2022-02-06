@@ -1,0 +1,1017 @@
+.images-well {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0px, 0px);
+
+  &.asian-womxn .targetClass:hover:not(.poster) {
+    -webkit-box-shadow: 0px 0px 24px 12px #FF4C24; 
+    box-shadow: 0px 0px 24px 12px #FF4C24;
+  }
+  &.illustrators .targetClass:hover:not(.poster) {
+    -webkit-box-shadow: 0px 0px 24px 12px #FFCEB3; 
+    box-shadow: 0px 0px 24px 12px #FFCEB3;  
+
+    &.drop-shadow {
+      -webkit-box-shadow: 0px 0px 0px 0px #FFCEB3; 
+      box-shadow: 0px 0px 0px 0px #FFCEB3;
+      filter: drop-shadow(0 0 17px #FFCEB3);
+    }
+  }
+  &.blog .targetClass:hover:not(.poster) {
+    -webkit-box-shadow: 0px 0px 24px 12px #C8FFCE; 
+    box-shadow: 0px 0px 24px 12px #C8FFCE;
+  }
+  &.health .targetClass:hover:not(.poster) {
+    -webkit-box-shadow: 0px 0px 24px 12px #34AC5D; 
+    box-shadow: 0px 0px 24px 12px #34AC5D;
+  }
+  &.nightsnack .targetClass:hover:not(.poster) {
+    -webkit-box-shadow: 0px 0px 24px 12px #8667FF; 
+    box-shadow: 0px 0px 24px 12px #8667FF;
+  }
+  &.spiritual .targetClass:hover:not(.poster) {
+    -webkit-box-shadow: 0px 0px 24px 12px #0B8639; 
+    box-shadow: 0px 0px 24px 12px #0B8639;
+  }
+  &.asian-womxn .project-title {
+    color: #FF4C24;
+  }
+  &.illustrators .project-title {
+    color: #0B1676;
+  }
+  &.blog .project-title {
+    color: #0A4D4D;
+  }
+  &.health .project-title {
+    color: #34AC5d;
+  }
+  &.nightsnack .project-title {
+    color: #8667FF;
+  }
+  &.spiritual .project-title {
+    color: #0B8639;
+  }
+  .images-palette {
+    width: 100%;
+    height: 100%;
+  }
+  .targetClass {
+    position: absolute;
+    display: block;
+    transform: translate(-50%, -50%);
+    transition: 0.75s ease-out;
+    z-index: 9;
+    height: auto;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+    }
+
+    .project-title {
+      display: none;
+      font-family: $font-sans;
+      letter-spacing: -0.4px;
+      line-height: 92%;
+      text-transform: uppercase;
+      min-width: 300px;
+      min-height: 50px;
+      text-align: center;
+      transform: translate(-50%,-50%);
+      position: absolute;
+      z-index: 999999999999999999999999999999999;
+    }
+    .test-relative {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    
+    &:hover:not(.poster) {
+      z-index: 99999999;
+      cursor: crosshair;
+      transition: 0.3s ease-out;
+      transform: translate(-50%, -50%) scale(1.25);
+
+      .project-title {
+        display: block;
+      }
+    }
+    
+    &.poster {
+      left: 50%;
+      z-index: 999;
+      height: auto;
+      top: 55%;
+      transform: translate(-50%, -50%) scale(1.1);
+      
+      @include respond-min($bp-tab) {
+        height: 44%;
+        top: 55%;
+      }
+
+      @include respond-min($bp-lap) {
+        height: 60%;
+        left: 50%;
+        top: 57%;
+      }
+
+      @include respond-min($bp-desk) {
+        height: 56%;
+        left: 50%;
+        top: 53%;
+      }
+
+      &.aw-poster.inactive-card {
+        top: -28%;
+      }
+      &.ii-poster.inactive-card {
+        top: -34%;
+      }
+      &.ss-poster.inactive-card {
+        left: 85%;
+        top: 130%;
+      }
+      &.bw-poster.inactive-card {
+        left: 77%;
+        top: -30%;
+      }
+      &.hw-poster.inactive-card {
+        left: 37%;
+        top: 130%;
+      }
+      &.ns-poster.inactive-card {
+        left: 28%;
+        top: 130%;
+      }
+    }
+
+    &.aw {
+      &-1 {
+        height: 28%;
+        left: 8%;
+        transform: scale(0.7) translate(-50%, -50%);
+
+        &.inactive-card {
+          left: -7%;
+          top: -14%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 17%;
+          left: 16%;
+          top: 34%;
+        }
+
+        @include respond-min($bp-tab) {
+          left: 22%;
+          top: 32%;
+        }
+      }
+
+      &-2 {
+        height: 20%;
+        left: 13%;
+        top: 60%;
+
+        &.inactive-card {
+          left: -6%;
+          top: -58%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 16%;
+          left: 13%;
+          top: 56%;
+          z-index: 10;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 25%;
+          left: 13%;
+          top: 65%;
+        }
+      }
+
+      &-3 {
+        height: 20%;
+        top: 79%;
+
+        &.inactive-card {
+          left: 30%;
+          top: 123%;
+        }
+        
+        @include respond-min($bp-mob) {
+          height: 25%;
+          left: 19%;
+          top: 75%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 44%;
+          left: 29%;
+          top: 72%;
+        }
+      }
+
+      &-4 {
+        display: none;
+        right: -20%;
+        top: 39%;
+        transform: translate(-50%, -50%) scale(1.5);
+
+        &.inactive-card {
+          left: 93%;
+          top: -12%;
+        }
+
+        @include respond-min($bp-mob) {
+          left: 78%;
+          top: 36%;
+          height: 19%;
+        }
+      }
+
+      &-5 {
+        right: -37%;
+        bottom: -6%;
+        transform: translate(-50%, -50%) scale(0.6);
+
+        &.inactive-card {
+          right: 23%;
+          bottom: -46%;
+        }
+        
+        @include respond-min($bp-mob) {
+          height: 20%;
+          right: -3%;
+          bottom: 5%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 30%;
+          right: 17%;
+          bottom: 0;
+        }
+      }
+
+      &-6 {
+        height: 16%;
+        bottom: 25%;
+        right: -5%;
+
+        &.inactive-card {
+          bottom: -28%;
+          right: -30%;
+        }
+
+        @include respond-min($bp-mob) {
+          &.inactive-card {
+            bottom: -10%;
+            right: -20%;
+          }
+        }
+
+        @include respond-min($bp-tab) {
+          height: 28%;
+          bottom: 11%;
+          right: 2%;
+
+          &.inactive-card {
+            bottom: -52%;
+            right: -80%;
+          }
+        }
+      }  
+    }
+
+    &.ii {
+      &-1 {
+        height: 12%;
+        left: 21%;
+        top: 31%;
+
+        &.inactive-card {
+          left: 26%;
+          top: -11%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 12%;
+          left: 13%;
+          top: 37%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 19%;
+          left: 29%;
+          top: 28%;
+        }
+      }
+
+      &-2 {
+        height: 11%;
+        left: -1%;
+        top: 42%;
+
+        &.inactive-card {
+          left: -8%;
+          top: 2%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 13%;
+          left: 2%;
+          top: 48%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 21%;
+          left: 13%;
+          top: 36%;
+        }
+      }
+
+      &-3 {
+        height: 14%;
+        left: 83%;
+        top: 60%;
+
+        &.inactive-card {
+          left: 86%;
+          top: 112%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 19%;
+          left: 72%;
+          top: 53%;
+        }
+      }
+
+      &-4 {
+        height: 11%;
+        right: 0%;
+        top: 82%;
+
+        &.inactive-card {
+          right: 0%;
+          top: 113%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 12%;
+          right: 0%;
+          top: 78%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 22%;
+          right: 18%;
+          top: 80%;
+        }
+      }
+
+      &-5 {
+        height: 8%;
+        left: 14%;
+        bottom: 39%;
+
+        &.inactive-card {
+          bottom: 103%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 9%;
+          left: 20%;
+          bottom: 37%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 14%;
+          left: 33%;
+          bottom: 37%;
+
+          &.inactive-card {
+            left: 41%;
+            bottom: 95%;
+          }
+        }
+      }
+
+      &-6 {
+        height: 11%;
+        bottom: 8%;
+        left: 4%;
+
+        &.inactive-card {
+          bottom: -31%;
+          left: -8%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 21%;
+          bottom: -6%;
+          left: 19%;
+        }
+      }
+      &-7 {
+        height: 12%;
+        left: -2%;
+        top: 65%;
+
+        &.inactive-card {
+          left: -30%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 17%;
+          left: 18%;
+          top: 58%;
+
+          &.inactive-card {
+            left: -10%;
+            top: 64%;
+          }
+        }
+      }
+
+      &-8 {
+        height: 25%;
+        left: 78%;
+        top: 39%;
+
+        &.inactive-card {
+          left: 73%;
+          top: -14%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 19%;
+          left: 83%;
+          top: 39%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 22%;
+          left: 73%;
+          top: 27%;
+        }
+      }
+
+      &-9 {
+        height: 10%;
+        right: -33%;
+        bottom: 13%;
+
+        &.inactive-card {
+          right: -56%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 10%;
+          right: -15%;
+          bottom: 18%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 13%;
+          right: 4%;
+          bottom: 7%;
+
+          &.inactive-card {
+            right: -18%;
+            bottom: -2%;
+          }
+        }
+      }
+
+      &-10 {
+        height: 12%;
+        bottom: 44%;
+        right: -19%;
+
+        &.inactive-card {
+          right: -36%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 12%;
+          bottom: 39%;
+          right: -10%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 19%;
+          bottom: 36%;
+          right: 7%;
+
+          &.inactive-card {
+            bottom: 30%;
+            right: -15%;
+          }
+        }
+      } 
+      &-11 {
+        height: 12%;
+        bottom: 10%;
+        left: 30%;
+
+        &.inactive-card {
+          bottom: -36%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 15%;
+          bottom: 9%;
+          left: 23%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 19%;
+          bottom: 6%;
+          left: 32%;
+        }
+      } 
+    }
+
+    &.ss {
+      &-1 {
+        height: 20%;
+        right: -35%;
+        top: 56%;
+
+        &.inactive-card {
+          right: -76%;
+          top: -20%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 24%;
+          right: -27%;
+          top: 60%;
+
+          &.inactive-card {
+            right: -50%;
+            top: -15%;
+          }
+        }
+
+        @include respond-min($bp-tab) {
+          height: 32%;
+          right: 8%;
+          top: 56%;
+
+          &.inactive-card {
+            right: -28%;
+            top: 20%;
+          }
+        }
+      }
+
+      &-2 {
+        height: 18%;
+        left: 12%;
+        top: 35%;
+
+        &.inactive-card {
+          left: -8%;
+          top: -14%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 23%;
+          left: 8%;
+          top: 44%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 33%;
+          left: 23%;
+          top: 35%;
+        }
+      }
+
+      &-3 {
+        height: 18%;
+        left: 24%;
+        top: 76%;
+
+        &.inactive-card {
+          top: 112%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 25%;
+          left: 29%;
+          top: 72%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 14%;
+          left: 14%;
+          top: 75%;
+        }
+      }
+    }
+
+    &.bw {
+      &-1 {
+        height: 16%;
+        right: -10%;
+        top: 58%;
+
+        &.inactive-card {
+          right: -46%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 15%;
+          right: 6%;
+          top: 54%;
+
+          &.inactive-card {
+            right: -28%;
+            top: 70%;
+          }
+        }
+
+        @include respond-min($bp-tab) {
+          height: 28%;
+          right: 18%;
+          top: 47%;
+
+          &.inactive-card {
+            right: -20%;
+            top: 67%;
+          }
+        }
+      }
+
+      &-2 {
+        height: 16%;
+        left: 10%;
+        top: 74%;
+
+        &.inactive-card {
+          left: -12%;
+          top: 115%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 17%;
+          left: 20%;
+          top: 75%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 28%;
+          left: 21%;
+          top: 68%;
+        }
+      }
+
+      &-3 {
+        height: 20%;
+        right: -20%;
+        top: 36%;
+
+        &.inactive-card {
+          right: -50%;
+          top: -15%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 20%;
+          right: -10%;
+          top: 38%;
+
+          &.inactive-card {
+            right: -35%;
+            top: 0%;
+          }
+        }
+
+        @include respond-min($bp-tab) {
+          height: 35%;
+          right: 1%;
+          top: 38%;
+
+          &.inactive-card {
+            right: -21%;
+            top: 15%;
+          }
+        }
+      }
+
+      &-4 {
+        height: 25%;
+        left: 13%;
+        top: 37%;
+
+        &.inactive-card {
+          left: -25%;
+          top: -20%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 26%;
+          left: 12%;
+          top: 44%;
+
+          &.inactive-card {
+            left: -18%;
+            top: -4%;
+          }
+        }
+
+        @include respond-min($bp-tab) {
+          height: 32%;
+          left: 25%;
+          top: 33%;
+
+          &.inactive-card {
+            left: -7%;
+            top: 11%;
+          }
+        }
+      }
+
+      &-5 {
+        height: 16%;
+        right: -19%;
+        bottom: 6%;
+
+        &.inactive-card {
+          right: 10%;
+          bottom: -45%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 18%;
+          right: -29%;
+          bottom: 7%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 29%;
+          right: 0%;
+          bottom: -10%;
+        }
+      }
+
+      &-6 {
+        height: 28%;
+        bottom: 11%;
+        right: 2%;
+      }  
+    }
+
+    &.hw {
+      &-1 {
+        height: 15%;
+        right: -6%;
+        top: 34%;
+
+        &.inactive-card {
+          right: 30%;
+          top: -15%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 20%;
+          right: -3%;
+          top: 35%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 28%;
+          right: 21%;
+          top: 30%;
+        }
+      }
+
+      &-2 {
+        height: 16%;
+        left: 21%;
+        top: 40%;
+
+        &.inactive-card {
+          left: 15%;
+          top: -20%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 20%;
+          left: 21%;
+          top: 35%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 35%;
+          left: 21%;
+          top: 35%;
+        }
+      }
+
+      &-3 {
+        height: 20%;
+        right: -14%;
+        top: 72%;
+
+        &.inactive-card {
+          right: 10%;
+          top: 115%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 18%;
+          right: 3%;
+          top: 78%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 31%;
+          right: 18%;
+          top: 69%;
+        }
+      }
+
+      &-4 {
+        height: 32%;
+        right: 1%;
+        top: 49%;
+
+        &.inactive-card {
+          right: -22%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 24%;
+          right: -18%;
+          top: 55%;
+
+          &.inactive-card {
+            right: -45%;
+          }
+        }
+
+        @include respond-min($bp-mob) {
+          height: 17%;
+          right: -26%;
+          top: 47%;
+
+          &.inactive-card {
+            right: -90%;
+          }
+        }
+      }
+
+      &-5 {
+        height: 23%;
+        left: 17%;
+        bottom: 4%;
+
+        &.inactive-card {
+          left: -28%;
+          bottom: 0%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 21%;
+          left: 14%;
+          bottom: 6%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 38%;
+          left: 27%;
+          bottom: -14%;
+        }
+      } 
+    }
+
+    &.ns {
+      &-1 {
+        height: 15%;
+        left: 5%;
+        top: 77%;
+
+        &.inactive-card {
+          left: -34%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 14%;
+          left: 18%;
+          top: 77%;
+
+          &.inactive-card {
+            left: -22%;
+            top: 77%;
+          }
+        }
+
+        @include respond-min($bp-tab) {
+          height: 25%;
+          left: 25%;
+          top: 72%;
+
+          &.inactive-card {
+            left: -12%;
+            top: 77%;
+          }
+        }
+      }
+
+      &-2 {
+        height: 17%;
+        left: 12%;
+        top: 35%;
+
+        &.inactive-card {
+          left: -32%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 20%;
+          left: 7%;
+          top: 47%;
+
+          &.inactive-card {
+            left: -25%;
+            top: -10%;
+          }
+        }
+
+        @include respond-min($bp-tab) {
+          height: 32%;
+          left: 21%;
+          top: 35%;
+
+          &.inactive-card {
+            left: -15%;
+            top: 10%;
+          }
+        }
+      }
+
+      &-3 {
+        height: 22%;
+        right: -12%;
+        top: 39%;
+
+        &.inactive-card {
+          right: 5%;
+          top: -24%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 44%;
+          right: 10%;
+          top: 42%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 29%;
+          right: -18%;
+          top: 46%;
+        }
+      }
+
+      &-4 {
+        height: 13%;
+        right: -35%;
+        top: 72%;
+
+        &.inactive-card {
+          right: -16%;
+          top: 110%;
+        }
+
+        @include respond-min($bp-mob) {
+          height: 14%;
+          right: -18%;
+          top: 78%;
+        }
+
+        @include respond-min($bp-tab) {
+          height: 18%;
+          right: 6%;
+          top: 80%;
+        }
+      }
+
+      &-5 {
+        height: 38%;
+        left: 27%;
+        bottom: -14%;
+      } 
+    }  
+  }
+}
