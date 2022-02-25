@@ -11,8 +11,8 @@ const H = new Highway.Core({
 
 var timeout;
 $('body').mousemove(function(e){
-  if(timeout) clearTimeout(timeout);
-  setTimeout(callParallax.bind(null, e), 200);
+  // if(timeout) clearTimeout(timeout);
+  // setTimeout(callParallax.bind(null, e), 200);
 });
 
 function callParallax(e){

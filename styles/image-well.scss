@@ -105,25 +105,48 @@
     &.poster {
       left: 50%;
       z-index: 999;
-      height: auto;
+      // height: 300px;
+      // width: auto;
       top: 55%;
       transform: translate(-50%, -50%) scale(1.1);
+
+      img {
+        width: 212px;
+      }
       
       @include respond-min($bp-tab) {
-        height: 44%;
+        // height: 44%;
         top: 55%;
+
+        img {
+          width: 307px;
+        }
       }
 
       @include respond-min($bp-lap) {
-        height: 60%;
+        // height: 60%;
         left: 50%;
         top: 57%;
+
+        img {
+          width: 367px;
+        }
       }
 
       @include respond-min($bp-desk) {
-        height: 56%;
+        // height: 56%;
         left: 50%;
         top: 53%;
+
+        img {
+          width: 424px;
+        }
+      }
+
+      @include respond-min($bp-lg-desk) {
+        img {
+          width: 460px;
+        }
       }
 
       &.aw-poster.inactive-card {
@@ -152,24 +175,52 @@
 
     &.aw {
       &-1 {
-        height: 28%;
         left: 8%;
-        transform: scale(0.7) translate(-50%, -50%);
+        top: 38%;
+        transform: translate(-50%, -50%);
+        // transform: scale(0.7) translate(-50%, -50%);
 
         &.inactive-card {
           left: -7%;
           top: -14%;
         }
 
-        @include respond-min($bp-mob) {
-          height: 17%;
-          left: 16%;
-          top: 34%;
+        img {
+          width: 127px;
         }
+
+        // @include respond-min($bp-mob) {
+        //   left: 16%;
+        //   top: 34%;
+
+        //   img {
+        //     width: 127px;
+        //   }
+        // }
 
         @include respond-min($bp-tab) {
           left: 22%;
           top: 32%;
+
+          img {
+            width: 154px;
+          }
+        }
+
+        @include respond-min($bp-lg-lap) {
+          img {
+            width: 194px;
+          }
+        }
+        @include respond-min($bp-desk) {
+          img {
+            width: 230px;
+          }
+        }
+        @include respond-min($bp-lg-desk) {
+          img {
+            width: 250px;
+          }
         }
       }
 
@@ -205,17 +256,36 @@
           left: 30%;
           top: 123%;
         }
-        
-        @include respond-min($bp-mob) {
-          height: 25%;
-          left: 19%;
-          top: 75%;
+
+        img {
+          width: 131px;
         }
 
         @include respond-min($bp-tab) {
-          height: 44%;
           left: 29%;
           top: 72%;
+          
+          img {
+            width: 193px;
+          }
+        }
+
+        @include respond-min($bp-tab) {
+          
+          img {
+            width: 237px;
+          }
+        }
+
+        @include respond-min($bp-desk) {
+          img {
+            width: 289px;
+          }
+        }
+        @include respond-min($bp-lg-desk) {
+          img {
+            width: 312px;
+          }
         }
       }
 
@@ -238,25 +308,49 @@
       }
 
       &-5 {
-        right: -37%;
-        bottom: -6%;
-        transform: translate(-50%, -50%) scale(0.6);
+        right: -14%;
+        bottom: 3%;
+        transform: translate(-50%, -50%);
 
         &.inactive-card {
           right: 23%;
-          bottom: -46%;
+          bottom: -50%;
+        }
+
+        img {
+          width: 125px;
         }
         
         @include respond-min($bp-mob) {
-          height: 20%;
           right: -3%;
           bottom: 5%;
+
+          img {
+            width: 181px;
+          }
         }
 
         @include respond-min($bp-tab) {
-          height: 30%;
           right: 17%;
           bottom: 0;
+        }
+
+        @include respond-min($bp-lg-lap) {
+          img {
+            width: 211px;
+          }
+        }
+
+        @include respond-min($bp-desk) {
+          img {
+            width: 258px;
+          }
+        }
+
+        @include respond-min($bp-lg-desk) {
+          img {
+            width: 278px;
+          }
         }
       }
 
